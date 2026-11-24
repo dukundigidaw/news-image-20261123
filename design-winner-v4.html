@@ -1,0 +1,224 @@
+<!-- WINNER-STYLE v4: 23 Nov 2026, 30 stories, centered date masthead. Fact audit (fixed event-date method): 6 list items replaced (S16 Denmark plot, S23 Skubal, S24 GTA VI, S25 Brentford, S26 Aus-Korea, S30 Manila all misdated), S05 Flores dek reframed to the toll, S18 reframed to the LUCAS drone, S28 reframed to the POLITICO Monday poll, S20 source tag fixed to Macau Business, sidebar numbers $3.79bn/$450m replaced by $1.62bn/60+, chips EUROPE 7 / ASIA 5, DATE CHECK extended with the removed stories. No em dashes anywhere (R-02). Fragment: wrap in a standalone doc (body margin 0) and screenshot at 1024x1024 with headless Chromium. -->
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+.wrap { container-type:size; width:1024px; height:1024px; }
+.page { width:100cqw; height:100cqw; background:#faf7f0; color:#141414; font-family:'DejaVu Sans',sans-serif; display:grid; grid-template-rows:2fr 7.5fr 2.6fr 2.6fr 23fr 13.5fr 13.5fr 20fr 5.2fr 1.3fr; gap:0.6cqw; padding:1.2cqw; }
+.page > * { min-height:0; min-width:0; }
+.serif { font-family:'Liberation Serif',Georgia,'DejaVu Serif',serif; }
+.topbar { display:flex; justify-content:space-between; align-items:center; border-bottom:0.18cqw solid #141414; font-size:1.12cqw; font-weight:700; letter-spacing:0.12cqw; }
+.masthead { font-family:'Liberation Serif',Georgia,'DejaVu Serif',serif; font-weight:700; font-size:7.2cqw; line-height:1; letter-spacing:-0.02cqw; display:flex; align-items:center; justify-content:center; text-align:center; white-space:nowrap; overflow:hidden; }
+.ticker { font-family:'Liberation Serif',Georgia,'DejaVu Serif',serif; font-style:italic; font-size:1.72cqw; color:#a31621; display:flex; align-items:center; border-top:0.1cqw solid #c9c2b4; border-bottom:0.1cqw solid #c9c2b4; white-space:nowrap; overflow:hidden; }
+.chips { display:flex; gap:0.5cqw; align-items:center; }
+.chip { color:#fff; font-weight:700; font-size:1.02cqw; letter-spacing:0.05cqw; padding:0.32cqw 0.85cqw; white-space:nowrap; }
+.features { display:grid; grid-template-columns:1fr 1fr 1fr 20cqw; gap:0.6cqw; }
+.feat,.med { background:#fff; border:0.11cqw solid #141414; display:flex; flex-direction:column; overflow:hidden; }
+.loc { background:#141414; color:#fff; font-size:0.92cqw; font-weight:700; letter-spacing:0.08cqw; padding:0.28cqw 0.5cqw; display:flex; align-items:center; gap:0.4cqw; }
+.num { background:#a31621; color:#fff; min-width:1.6cqw; height:1.6cqw; display:inline-flex; align-items:center; justify-content:center; font-size:1cqw; font-weight:700; }
+.pic { position:relative; overflow:hidden; flex:none; }
+.feat .pic { height:9cqw; }
+.pic img { width:100%; height:100%; object-fit:cover; display:block; }
+.badge { position:absolute; right:0.4cqw; bottom:0.4cqw; font-size:0.78cqw; font-weight:700; letter-spacing:0.06cqw; padding:0.18cqw 0.45cqw; color:#fff; }
+.badge.rep { background:#1e7d32; }
+.badge.claim { background:#d9a400; color:#141414; }
+.badge.ong { background:#c2410c; }
+.kick { color:#a31621; font-size:0.92cqw; font-weight:700; letter-spacing:0.08cqw; padding:0.45cqw 0.6cqw 0; }
+.feat h3 { font-family:'Liberation Serif',Georgia,'DejaVu Serif',serif; font-size:1.82cqw; line-height:1.12; padding:0.2cqw 0.6cqw 0; }
+.dek { font-size:1.1cqw; line-height:1.3; padding:0.25cqw 0.6cqw 0; color:#333; }
+.src { font-size:0.8cqw; color:#777; padding:0.3cqw 0.6cqw 0.45cqw; margin-top:auto; }
+.nums { background:#fff; border:0.11cqw solid #141414; padding:0.55cqw 0.7cqw; display:flex; flex-direction:column; }
+.nums h4 { font-size:1.02cqw; letter-spacing:0.1cqw; border-bottom:0.15cqw solid #141414; padding-bottom:0.35cqw; margin-bottom:0.25cqw; }
+.nitem { padding:0.22cqw 0; border-bottom:0.08cqw solid #e0dcd2; }
+.nitem:last-child { border-bottom:none; }
+.nitem .n { font-family:'Liberation Serif',Georgia,'DejaVu Serif',serif; font-weight:700; font-size:1.7cqw; line-height:1.05; }
+.nitem .l { font-size:0.9cqw; color:#555; line-height:1.25; white-space:nowrap; overflow:hidden; }
+.medrow { display:grid; grid-template-columns:repeat(5,1fr); gap:0.6cqw; }
+.med .loc { font-size:0.78cqw; padding:0.2cqw 0.4cqw; }
+.med .num { min-width:1.3cqw; height:1.3cqw; font-size:0.82cqw; }
+.med .pic { height:5cqw; }
+.med .kick { font-size:0.8cqw; padding:0.3cqw 0.5cqw 0; }
+.med h3 { font-family:'Liberation Serif',Georgia,'DejaVu Serif',serif; font-size:1.26cqw; line-height:1.12; padding:0.15cqw 0.5cqw 0; }
+.med .dek { font-size:0.96cqw; line-height:1.26; padding:0.18cqw 0.5cqw 0; }
+.med .src { font-size:0.76cqw; padding:0.2cqw 0.5cqw 0.35cqw; }
+.bottom { display:grid; grid-template-columns:1fr 32cqw; gap:0.6cqw; }
+.also { background:#fff; border:0.11cqw solid #141414; padding:0.5cqw 0.7cqw; display:flex; flex-direction:column; }
+.also h4 { font-size:1.12cqw; letter-spacing:0.06cqw; border-bottom:0.15cqw solid #141414; padding-bottom:0.3cqw; display:flex; justify-content:space-between; align-items:baseline; }
+.legend { font-size:0.78cqw; font-weight:400; letter-spacing:0; color:#555; white-space:nowrap; }
+.legend i { display:inline-block; width:0.7cqw; height:0.7cqw; margin:0 0.15cqw 0 0.5cqw; vertical-align:-0.05cqw; }
+.alist { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(9,1fr); gap:0.1cqw 1.2cqw; flex:1; margin-top:0.25cqw; }
+.item { display:flex; align-items:baseline; gap:0.35cqw; font-size:1.06cqw; line-height:1.15; white-space:nowrap; overflow:hidden; }
+.item .n { font-weight:700; color:#a31621; flex:none; }
+.item .st { width:0.7cqw; height:0.7cqw; flex:none; align-self:center; }
+.item .t { font-weight:700; }
+.item .s { color:#888; font-size:0.84cqw; font-weight:400; }
+.mapbox { background:#fff; border:0.11cqw solid #141414; padding:0.5cqw 0.7cqw; display:flex; flex-direction:column; }
+.mapbox h4 { font-size:1.02cqw; letter-spacing:0.06cqw; border-bottom:0.15cqw solid #141414; padding-bottom:0.3cqw; }
+.mapbox h4 span { font-weight:400; color:#555; font-size:0.78cqw; }
+.mapwrap { flex:1; display:flex; align-items:center; justify-content:center; min-height:0; }
+.mapwrap svg { width:100%; height:100%; }
+.datecheck { background:#a31621; color:#fff; padding:0.4cqw 0.8cqw; font-size:1cqw; line-height:1.38; overflow:hidden; }
+.datecheck b { letter-spacing:0.04cqw; }
+.howsure { font-size:0.86cqw; color:#555; display:flex; align-items:center; justify-content:center; text-align:center; }
+</style>
+<div class="wrap"><div class="page">
+<div class="topbar"><span>THE WORLD IN ONE DAY</span><span>30 STORIES · 7 REGIONS · ALL FROM THIS ONE DAY</span></div>
+<div class="masthead">Monday 23 November 2026</div>
+<div class="ticker">Trump brings back Nvidia's Huang&nbsp;·&nbsp;Three tankers ablaze in Hormuz&nbsp;·&nbsp;700,000 Russians dead in Ukraine</div>
+<div class="chips">
+<span class="chip" style="background:#2f6db3">EUROPE 7</span>
+<span class="chip" style="background:#2a9d8f">MIDDLE EAST 6</span>
+<span class="chip" style="background:#6a994e">AFRICA 2</span>
+<span class="chip" style="background:#e07b39">ASIA 5</span>
+<span class="chip" style="background:#c1121f">AMERICAS 4</span>
+<span class="chip" style="background:#7b5ea7">OCEANIA 2</span>
+<span class="chip" style="background:#6c757d">WORLD 4</span>
+</div>
+<div class="features">
+<article class="feat">
+<div class="loc"><span class="num">1</span>SANTA CLARA, USA</div>
+<div class="pic"><img src="img/win-nvidia.png" width="480" height="320" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">WORLD · TECH</div>
+<h3>Trump brings back Nvidia's Huang</h3>
+<p class="dek">Trump brokered the CEO's return 11 days after he quit; shares soar.</p>
+<p class="src">NYT · Reuters · BBC · CNBC</p>
+</article>
+<article class="feat">
+<div class="loc"><span class="num">2</span>STRAIT OF HORMUZ</div>
+<div class="pic"><img src="img/row2-1.png" width="300" height="200" alt=""><span class="badge ong">ONGOING</span></div>
+<div class="kick">MIDDLE EAST · GULF</div>
+<h3>Three tankers ablaze in Hormuz</h3>
+<p class="dek">IRGC says mine blasts set three tankers alight; US blockade tightens.</p>
+<p class="src">Anadolu · Jerusalem Post · Middle East Eye</p>
+</article>
+<article class="feat">
+<div class="loc"><span class="num">3</span>UKRAINE</div>
+<div class="pic"><img src="img/cont-europe.png" width="400" height="267" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">EUROPE · WAR</div>
+<h3>700,000 Russians dead in Ukraine</h3>
+<p class="dek">New analysis puts the toll past 700,000 killed, the grimmest milestone yet.</p>
+<p class="src">NYT · Guardian · RFE/RL</p>
+</article>
+<aside class="nums">
+<h4>THE DAY IN NUMBERS</h4>
+<div class="nitem"><div class="n">700,000</div><div class="l">Russians killed in Ukraine</div></div>
+<div class="nitem"><div class="n">$1.62bn</div><div class="l">India's aid package for Nepal</div></div>
+<div class="nitem"><div class="n">60+</div><div class="l">killed in Nigeria attacks</div></div>
+<div class="nitem"><div class="n">54</div><div class="l">killed in the Flores quake</div></div>
+<div class="nitem"><div class="n">24</div><div class="l">dead in the Cikande fire; 34 missing</div></div>
+<div class="nitem"><div class="n">11 days</div><div class="l">Huang out before his return</div></div>
+</aside>
+</div>
+<div class="medrow">
+<article class="med">
+<div class="loc"><span class="num">4</span>ANTALYA, TÜRKIYE</div>
+<div class="pic"><img src="img/row2-2.png" width="300" height="200" alt=""><span class="badge ong">ONGOING</span></div>
+<div class="kick">WORLD · CLIMATE</div>
+<h3>COP31 fallout: reform the summits</h3>
+<p class="dek">Calls grow to overhaul UN talks.</p>
+<p class="src">Guardian · Reuters · UN</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">5</span>FLORES, INDONESIA</div>
+<div class="pic"><img src="img/row2-3.png" width="300" height="200" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">ASIA · DISASTER</div>
+<h3>Flores quake toll hits 54</h3>
+<p class="dek">Toll reaches 54 as aid runs short; 12,800 homeless.</p>
+<p class="src">DW</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">6</span>ULLEUNG ISLAND</div>
+<div class="pic"><img src="img/row2-4.png" width="300" height="200" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">ASIA · SECURITY</div>
+<h3>Russian jets spark island alert</h3>
+<p class="dek">Ulleung told to shelter; alert lifted in 3 minutes.</p>
+<p class="src">AP · Bloomberg</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">7</span>MOSCOW</div>
+<div class="pic"><img src="img/row2-5.png" width="300" height="200" alt=""><span class="badge claim">CLAIM</span></div>
+<div class="kick">WORLD · SPACE</div>
+<h3>Russia may orbit a nuke</h3>
+<p class="dek">NATO intelligence cited; launch 'as soon as next month'.</p>
+<p class="src">Guardian · Ars Technica</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">8</span>ZURICH</div>
+<div class="pic"><img src="img/win-worldcups.png" width="480" height="320" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">WORLD · SPORT</div>
+<h3>World Cups: US 2031, UK 2035</h3>
+<p class="dek">FIFA names hosts: US-led bid for 2031, UK for 2035.</p>
+<p class="src">Reuters · ESPN</p>
+</article>
+</div>
+<div class="medrow">
+<article class="med">
+<div class="loc"><span class="num">9</span>GAZA</div>
+<div class="pic"><img src="img/win-gaza.png" width="480" height="160" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">MIDDLE EAST · GAZA</div>
+<h3>Gaza a 'toxic wasteland'</h3>
+<p class="dek">Oxfam: 99% shows contamination.</p>
+<p class="src">Guardian · CNN · Oxfam</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">10</span>TEHRAN</div>
+<div class="pic"><img src="img/win-iran.png" width="480" height="160" alt=""><span class="badge ong">ONGOING</span></div>
+<div class="kick">MIDDLE EAST · IRAN</div>
+<h3>Iran vows to fight US blockade</h3>
+<p class="dek">'All tools' against naval blockade.</p>
+<p class="src">Reuters</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">11</span>NEW DELHI</div>
+<div class="pic"><img src="img/win-indianepal.png" width="480" height="320" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">ASIA · DIPLOMACY</div>
+<h3>India gives Nepal $1.62bn</h3>
+<p class="dek">Flood-relief package as Shah visits Modi.</p>
+<p class="src">Reuters · Al Jazeera</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">12</span>WELLINGTON</div>
+<div class="pic"><img src="img/cont-oceania.png" width="400" height="267" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">OCEANIA · CRICKET</div>
+<h3>NZ hold on for Test draw</h3>
+<p class="dek">239-5 saves Wellington Test v India.</p>
+<p class="src">Sky Sports · SCMP</p>
+</article>
+<article class="med">
+<div class="loc"><span class="num">13</span>BRASÍLIA</div>
+<div class="pic"><img src="img/cont-samerica.png" width="380" height="253" alt=""><span class="badge rep">REPORTED</span></div>
+<div class="kick">AMERICAS · MARKETS</div>
+<h3>Real hits 19-month low</h3>
+<p class="dek">Post-election selloff deepens; GDP forecast cut.</p>
+<p class="src">Bloomberg · Reuters</p>
+</article>
+</div>
+<div class="bottom">
+<div class="also">
+<h4>ALSO ON MONDAY 23 NOVEMBER <span class="legend"><i style="background:#1e7d32"></i>REPORTED<i style="background:#d9a400"></i>CLAIM<i style="background:#c2410c"></i>ONGOING</span></h4>
+<div class="alist">
+<div class="item"><span class="n">14</span><span class="st" style="background:#1e7d32"></span><span class="t">NATO meets urgently on Russia</span><span class="s">WaPo</span></div>
+<div class="item"><span class="n">22</span><span class="st" style="background:#1e7d32"></span><span class="t">'El Chapo Isidro' to face trial</span><span class="s">Reuters</span></div>
+<div class="item"><span class="n">15</span><span class="st" style="background:#1e7d32"></span><span class="t">EU readies 22nd Russia sanctions</span><span class="s">Al Jazeera</span></div>
+<div class="item"><span class="n">23</span><span class="st" style="background:#1e7d32"></span><span class="t">Hawaii volcano erupts</span><span class="s">Reuters</span></div>
+<div class="item"><span class="n">16</span><span class="st" style="background:#1e7d32"></span><span class="t">Bundeswehr to use Kyiv's Delta</span><span class="s">Reuters</span></div>
+<div class="item"><span class="n">24</span><span class="st" style="background:#1e7d32"></span><span class="t">AP editor Polly Anderson dies</span><span class="s">AP</span></div>
+<div class="item"><span class="n">17</span><span class="st" style="background:#1e7d32"></span><span class="t">Gaza strikes kill 3, incl. UN worker</span><span class="s">Reuters</span></div>
+<div class="item"><span class="n">25</span><span class="st" style="background:#1e7d32"></span><span class="t">Bomb threats hit schools</span><span class="s">Al Jazeera</span></div>
+<div class="item"><span class="n">18</span><span class="st" style="background:#d9a400"></span><span class="t">Iran claims LUCAS drone downed</span><span class="s">Iran Intl</span></div>
+<div class="item"><span class="n">26</span><span class="st" style="background:#1e7d32"></span><span class="t">COP31 backlash in Australia</span><span class="s">Reuters</span></div>
+<div class="item"><span class="n">19</span><span class="st" style="background:#1e7d32"></span><span class="t">US sanctions Iran shadow banks</span><span class="s">Reuters</span></div>
+<div class="item"><span class="n">27</span><span class="st" style="background:#1e7d32"></span><span class="t">Asian stocks tumble</span><span class="s">Al Jazeera</span></div>
+<div class="item"><span class="n">20</span><span class="st" style="background:#1e7d32"></span><span class="t">Nigeria attacks toll passes 60</span><span class="s">Macau Business</span></div>
+<div class="item"><span class="n">28</span><span class="st" style="background:#1e7d32"></span><span class="t">Spain turns against Sánchez</span><span class="s">POLITICO</span></div>
+<div class="item"><span class="n">21</span><span class="st" style="background:#c2410c"></span><span class="t">Factory fire toll hits 24</span><span class="s">SCMP</span></div>
+<div class="item"><span class="n">29</span><span class="st" style="background:#1e7d32"></span><span class="t">Morocco launches disaster alerts</span><span class="s">The New Arab</span></div>
+<div class="item"><span class="n">30</span><span class="st" style="background:#1e7d32"></span><span class="t">Bird flu hits French farm</span><span class="s">Reuters</span></div>
+</div>
+</div>
+<div class="mapbox">
+<h4>WHERE IT HAPPENED <span>pins = story numbers</span></h4>
+<div class="mapwrap"><svg viewBox="0 0 440 220" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="M12.5 2.5h5v5h-5zM22.5 2.5h5v5h-5zM32.5 2.5h5v5h-5zM42.5 2.5h5v5h-5zM52.5 2.5h5v5h-5zM62.5 2.5h5v5h-5zM72.5 2.5h5v5h-5zM82.5 2.5h5v5h-5zM152.5 2.5h5v5h-5zM162.5 2.5h5v5h-5zM172.5 2.5h5v5h-5zM272.5 2.5h5v5h-5zM282.5 2.5h5v5h-5zM292.5 2.5h5v5h-5zM302.5 2.5h5v5h-5zM312.5 2.5h5v5h-5zM322.5 2.5h5v5h-5zM332.5 2.5h5v5h-5zM342.5 2.5h5v5h-5zM352.5 2.5h5v5h-5zM362.5 2.5h5v5h-5zM372.5 2.5h5v5h-5zM382.5 2.5h5v5h-5zM392.5 2.5h5v5h-5zM402.5 2.5h5v5h-5zM12.5 12.5h5v5h-5zM22.5 12.5h5v5h-5zM32.5 12.5h5v5h-5zM42.5 12.5h5v5h-5zM52.5 12.5h5v5h-5zM62.5 12.5h5v5h-5zM72.5 12.5h5v5h-5zM82.5 12.5h5v5h-5zM92.5 12.5h5v5h-5zM102.5 12.5h5v5h-5zM112.5 12.5h5v5h-5zM122.5 12.5h5v5h-5zM132.5 12.5h5v5h-5zM152.5 12.5h5v5h-5zM162.5 12.5h5v5h-5zM172.5 12.5h5v5h-5zM222.5 12.5h5v5h-5zM232.5 12.5h5v5h-5zM262.5 12.5h5v5h-5zM272.5 12.5h5v5h-5zM282.5 12.5h5v5h-5zM292.5 12.5h5v5h-5zM302.5 12.5h5v5h-5zM312.5 12.5h5v5h-5zM322.5 12.5h5v5h-5zM332.5 12.5h5v5h-5zM342.5 12.5h5v5h-5zM352.5 12.5h5v5h-5zM362.5 12.5h5v5h-5zM372.5 12.5h5v5h-5zM382.5 12.5h5v5h-5zM392.5 12.5h5v5h-5zM402.5 12.5h5v5h-5zM412.5 12.5h5v5h-5zM422.5 12.5h5v5h-5zM12.5 22.5h5v5h-5zM22.5 22.5h5v5h-5zM32.5 22.5h5v5h-5zM42.5 22.5h5v5h-5zM52.5 22.5h5v5h-5zM62.5 22.5h5v5h-5zM72.5 22.5h5v5h-5zM82.5 22.5h5v5h-5zM92.5 22.5h5v5h-5zM102.5 22.5h5v5h-5zM112.5 22.5h5v5h-5zM122.5 22.5h5v5h-5zM132.5 22.5h5v5h-5zM142.5 22.5h5v5h-5zM152.5 22.5h5v5h-5zM162.5 22.5h5v5h-5zM222.5 22.5h5v5h-5zM232.5 22.5h5v5h-5zM242.5 22.5h5v5h-5zM252.5 22.5h5v5h-5zM262.5 22.5h5v5h-5zM272.5 22.5h5v5h-5zM282.5 22.5h5v5h-5zM292.5 22.5h5v5h-5zM302.5 22.5h5v5h-5zM312.5 22.5h5v5h-5zM322.5 22.5h5v5h-5zM332.5 22.5h5v5h-5zM342.5 22.5h5v5h-5zM352.5 22.5h5v5h-5zM362.5 22.5h5v5h-5zM372.5 22.5h5v5h-5zM382.5 22.5h5v5h-5zM392.5 22.5h5v5h-5zM402.5 22.5h5v5h-5zM412.5 22.5h5v5h-5zM422.5 22.5h5v5h-5zM32.5 32.5h5v5h-5zM42.5 32.5h5v5h-5zM52.5 32.5h5v5h-5zM62.5 32.5h5v5h-5zM72.5 32.5h5v5h-5zM82.5 32.5h5v5h-5zM92.5 32.5h5v5h-5zM102.5 32.5h5v5h-5zM112.5 32.5h5v5h-5zM122.5 32.5h5v5h-5zM132.5 32.5h5v5h-5zM142.5 32.5h5v5h-5zM202.5 32.5h5v5h-5zM212.5 32.5h5v5h-5zM222.5 32.5h5v5h-5zM232.5 32.5h5v5h-5zM242.5 32.5h5v5h-5zM252.5 32.5h5v5h-5zM262.5 32.5h5v5h-5zM272.5 32.5h5v5h-5zM282.5 32.5h5v5h-5zM292.5 32.5h5v5h-5zM302.5 32.5h5v5h-5zM312.5 32.5h5v5h-5zM322.5 32.5h5v5h-5zM332.5 32.5h5v5h-5zM342.5 32.5h5v5h-5zM352.5 32.5h5v5h-5zM362.5 32.5h5v5h-5zM372.5 32.5h5v5h-5zM382.5 32.5h5v5h-5zM392.5 32.5h5v5h-5zM402.5 32.5h5v5h-5zM42.5 42.5h5v5h-5zM52.5 42.5h5v5h-5zM62.5 42.5h5v5h-5zM72.5 42.5h5v5h-5zM82.5 42.5h5v5h-5zM92.5 42.5h5v5h-5zM102.5 42.5h5v5h-5zM112.5 42.5h5v5h-5zM122.5 42.5h5v5h-5zM132.5 42.5h5v5h-5zM142.5 42.5h5v5h-5zM202.5 42.5h5v5h-5zM212.5 42.5h5v5h-5zM222.5 42.5h5v5h-5zM232.5 42.5h5v5h-5zM242.5 42.5h5v5h-5zM252.5 42.5h5v5h-5zM262.5 42.5h5v5h-5zM272.5 42.5h5v5h-5zM282.5 42.5h5v5h-5zM292.5 42.5h5v5h-5zM302.5 42.5h5v5h-5zM312.5 42.5h5v5h-5zM322.5 42.5h5v5h-5zM332.5 42.5h5v5h-5zM342.5 42.5h5v5h-5zM352.5 42.5h5v5h-5zM362.5 42.5h5v5h-5zM372.5 42.5h5v5h-5zM382.5 42.5h5v5h-5zM392.5 42.5h5v5h-5zM402.5 42.5h5v5h-5zM42.5 52.5h5v5h-5zM52.5 52.5h5v5h-5zM62.5 52.5h5v5h-5zM72.5 52.5h5v5h-5zM82.5 52.5h5v5h-5zM92.5 52.5h5v5h-5zM102.5 52.5h5v5h-5zM112.5 52.5h5v5h-5zM122.5 52.5h5v5h-5zM132.5 52.5h5v5h-5zM142.5 52.5h5v5h-5zM202.5 52.5h5v5h-5zM212.5 52.5h5v5h-5zM222.5 52.5h5v5h-5zM232.5 52.5h5v5h-5zM242.5 52.5h5v5h-5zM252.5 52.5h5v5h-5zM262.5 52.5h5v5h-5zM272.5 52.5h5v5h-5zM282.5 52.5h5v5h-5zM292.5 52.5h5v5h-5zM302.5 52.5h5v5h-5zM312.5 52.5h5v5h-5zM322.5 52.5h5v5h-5zM332.5 52.5h5v5h-5zM342.5 52.5h5v5h-5zM352.5 52.5h5v5h-5zM362.5 52.5h5v5h-5zM372.5 52.5h5v5h-5zM382.5 52.5h5v5h-5zM392.5 52.5h5v5h-5zM412.5 52.5h5v5h-5zM42.5 62.5h5v5h-5zM52.5 62.5h5v5h-5zM62.5 62.5h5v5h-5zM72.5 62.5h5v5h-5zM82.5 62.5h5v5h-5zM92.5 62.5h5v5h-5zM102.5 62.5h5v5h-5zM112.5 62.5h5v5h-5zM122.5 62.5h5v5h-5zM132.5 62.5h5v5h-5zM202.5 62.5h5v5h-5zM212.5 62.5h5v5h-5zM222.5 62.5h5v5h-5zM232.5 62.5h5v5h-5zM242.5 62.5h5v5h-5zM252.5 62.5h5v5h-5zM262.5 62.5h5v5h-5zM272.5 62.5h5v5h-5zM282.5 62.5h5v5h-5zM292.5 62.5h5v5h-5zM302.5 62.5h5v5h-5zM312.5 62.5h5v5h-5zM332.5 62.5h5v5h-5zM342.5 62.5h5v5h-5zM352.5 62.5h5v5h-5zM362.5 62.5h5v5h-5zM372.5 62.5h5v5h-5zM382.5 62.5h5v5h-5zM392.5 62.5h5v5h-5zM412.5 62.5h5v5h-5zM42.5 72.5h5v5h-5zM52.5 72.5h5v5h-5zM62.5 72.5h5v5h-5zM72.5 72.5h5v5h-5zM82.5 72.5h5v5h-5zM92.5 72.5h5v5h-5zM102.5 72.5h5v5h-5zM112.5 72.5h5v5h-5zM122.5 72.5h5v5h-5zM202.5 72.5h5v5h-5zM212.5 72.5h5v5h-5zM222.5 72.5h5v5h-5zM232.5 72.5h5v5h-5zM242.5 72.5h5v5h-5zM252.5 72.5h5v5h-5zM262.5 72.5h5v5h-5zM272.5 72.5h5v5h-5zM282.5 72.5h5v5h-5zM292.5 72.5h5v5h-5zM302.5 72.5h5v5h-5zM312.5 72.5h5v5h-5zM322.5 72.5h5v5h-5zM342.5 72.5h5v5h-5zM352.5 72.5h5v5h-5zM362.5 72.5h5v5h-5zM372.5 72.5h5v5h-5zM382.5 72.5h5v5h-5zM52.5 82.5h5v5h-5zM62.5 82.5h5v5h-5zM72.5 82.5h5v5h-5zM82.5 82.5h5v5h-5zM92.5 82.5h5v5h-5zM102.5 82.5h5v5h-5zM202.5 82.5h5v5h-5zM212.5 82.5h5v5h-5zM222.5 82.5h5v5h-5zM232.5 82.5h5v5h-5zM242.5 82.5h5v5h-5zM252.5 82.5h5v5h-5zM262.5 82.5h5v5h-5zM272.5 82.5h5v5h-5zM282.5 82.5h5v5h-5zM292.5 82.5h5v5h-5zM302.5 82.5h5v5h-5zM312.5 82.5h5v5h-5zM322.5 82.5h5v5h-5zM332.5 82.5h5v5h-5zM352.5 82.5h5v5h-5zM362.5 82.5h5v5h-5zM372.5 82.5h5v5h-5zM382.5 82.5h5v5h-5zM62.5 92.5h5v5h-5zM72.5 92.5h5v5h-5zM82.5 92.5h5v5h-5zM92.5 92.5h5v5h-5zM102.5 92.5h5v5h-5zM112.5 92.5h5v5h-5zM202.5 92.5h5v5h-5zM212.5 92.5h5v5h-5zM222.5 92.5h5v5h-5zM232.5 92.5h5v5h-5zM242.5 92.5h5v5h-5zM252.5 92.5h5v5h-5zM262.5 92.5h5v5h-5zM272.5 92.5h5v5h-5zM282.5 92.5h5v5h-5zM322.5 92.5h5v5h-5zM332.5 92.5h5v5h-5zM352.5 92.5h5v5h-5zM362.5 92.5h5v5h-5zM372.5 92.5h5v5h-5zM382.5 92.5h5v5h-5zM82.5 102.5h5v5h-5zM92.5 102.5h5v5h-5zM102.5 102.5h5v5h-5zM112.5 102.5h5v5h-5zM212.5 102.5h5v5h-5zM222.5 102.5h5v5h-5zM232.5 102.5h5v5h-5zM242.5 102.5h5v5h-5zM252.5 102.5h5v5h-5zM262.5 102.5h5v5h-5zM272.5 102.5h5v5h-5zM282.5 102.5h5v5h-5zM342.5 102.5h5v5h-5zM352.5 102.5h5v5h-5zM362.5 102.5h5v5h-5zM372.5 102.5h5v5h-5zM382.5 102.5h5v5h-5zM112.5 112.5h5v5h-5zM122.5 112.5h5v5h-5zM132.5 112.5h5v5h-5zM142.5 112.5h5v5h-5zM152.5 112.5h5v5h-5zM162.5 112.5h5v5h-5zM222.5 112.5h5v5h-5zM232.5 112.5h5v5h-5zM242.5 112.5h5v5h-5zM252.5 112.5h5v5h-5zM262.5 112.5h5v5h-5zM272.5 112.5h5v5h-5zM282.5 112.5h5v5h-5zM342.5 112.5h5v5h-5zM352.5 112.5h5v5h-5zM362.5 112.5h5v5h-5zM372.5 112.5h5v5h-5zM382.5 112.5h5v5h-5zM392.5 112.5h5v5h-5zM112.5 122.5h5v5h-5zM122.5 122.5h5v5h-5zM132.5 122.5h5v5h-5zM142.5 122.5h5v5h-5zM152.5 122.5h5v5h-5zM162.5 122.5h5v5h-5zM172.5 122.5h5v5h-5zM222.5 122.5h5v5h-5zM232.5 122.5h5v5h-5zM242.5 122.5h5v5h-5zM252.5 122.5h5v5h-5zM262.5 122.5h5v5h-5zM272.5 122.5h5v5h-5zM282.5 122.5h5v5h-5zM342.5 122.5h5v5h-5zM352.5 122.5h5v5h-5zM362.5 122.5h5v5h-5zM372.5 122.5h5v5h-5zM382.5 122.5h5v5h-5zM392.5 122.5h5v5h-5zM112.5 132.5h5v5h-5zM122.5 132.5h5v5h-5zM132.5 132.5h5v5h-5zM142.5 132.5h5v5h-5zM152.5 132.5h5v5h-5zM162.5 132.5h5v5h-5zM172.5 132.5h5v5h-5zM232.5 132.5h5v5h-5zM242.5 132.5h5v5h-5zM252.5 132.5h5v5h-5zM262.5 132.5h5v5h-5zM272.5 132.5h5v5h-5zM282.5 132.5h5v5h-5zM342.5 132.5h5v5h-5zM352.5 132.5h5v5h-5zM362.5 132.5h5v5h-5zM372.5 132.5h5v5h-5zM382.5 132.5h5v5h-5zM392.5 132.5h5v5h-5zM112.5 142.5h5v5h-5zM122.5 142.5h5v5h-5zM132.5 142.5h5v5h-5zM142.5 142.5h5v5h-5zM152.5 142.5h5v5h-5zM162.5 142.5h5v5h-5zM172.5 142.5h5v5h-5zM232.5 142.5h5v5h-5zM242.5 142.5h5v5h-5zM252.5 142.5h5v5h-5zM262.5 142.5h5v5h-5zM272.5 142.5h5v5h-5zM362.5 142.5h5v5h-5zM372.5 142.5h5v5h-5zM382.5 142.5h5v5h-5zM392.5 142.5h5v5h-5zM112.5 152.5h5v5h-5zM122.5 152.5h5v5h-5zM132.5 152.5h5v5h-5zM142.5 152.5h5v5h-5zM152.5 152.5h5v5h-5zM162.5 152.5h5v5h-5zM242.5 152.5h5v5h-5zM252.5 152.5h5v5h-5zM262.5 152.5h5v5h-5zM272.5 152.5h5v5h-5zM352.5 152.5h5v5h-5zM362.5 152.5h5v5h-5zM372.5 152.5h5v5h-5zM382.5 152.5h5v5h-5zM392.5 152.5h5v5h-5zM112.5 162.5h5v5h-5zM122.5 162.5h5v5h-5zM132.5 162.5h5v5h-5zM142.5 162.5h5v5h-5zM242.5 162.5h5v5h-5zM252.5 162.5h5v5h-5zM262.5 162.5h5v5h-5zM352.5 162.5h5v5h-5zM362.5 162.5h5v5h-5zM372.5 162.5h5v5h-5zM382.5 162.5h5v5h-5zM392.5 162.5h5v5h-5zM122.5 172.5h5v5h-5zM132.5 172.5h5v5h-5zM142.5 172.5h5v5h-5zM242.5 172.5h5v5h-5zM252.5 172.5h5v5h-5zM262.5 172.5h5v5h-5zM352.5 172.5h5v5h-5zM362.5 172.5h5v5h-5zM372.5 172.5h5v5h-5zM382.5 172.5h5v5h-5zM422.5 172.5h5v5h-5zM122.5 182.5h5v5h-5zM132.5 182.5h5v5h-5zM362.5 182.5h5v5h-5zM372.5 182.5h5v5h-5zM382.5 182.5h5v5h-5zM422.5 182.5h5v5h-5zM122.5 192.5h5v5h-5zM132.5 192.5h5v5h-5zM422.5 192.5h5v5h-5zM122.5 202.5h5v5h-5zM122.5 212.5h5v5h-5z" fill="#2b3a4a"/><circle cx="70.9" cy="61.3" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="70.9" y="61.3" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">1</text><circle cx="288.8" cy="78.9" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="288.8" y="78.9" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">2</text><circle cx="259.1" cy="42.4" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="259.1" y="42.4" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">3</text><circle cx="251.5" cy="57.1" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="251.5" y="57.1" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">4</text><circle cx="367.9" cy="136.4" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="367.9" y="136.4" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">5</text><circle cx="380.0" cy="61.1" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="380.0" y="61.1" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">6</text><circle cx="266.0" cy="31.3" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="266.0" y="31.3" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">7</text><circle cx="230.4" cy="45.0" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="230.4" y="45.0" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">8</text><circle cx="268.2" cy="75.9" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="268.2" y="75.9" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">9</text><circle cx="282.8" cy="64.0" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="282.8" y="64.0" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">10</text><circle cx="314.4" cy="75.6" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="314.4" y="75.6" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">11</text><circle cx="429.6" cy="189.5" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="429.6" y="189.5" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">12</text><circle cx="161.5" cy="148.0" r="7" fill="#a31621" stroke="#fff" stroke-width="1.5"/><text x="161.5" y="148.0" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle" dy="3">13</text></svg></div>
+</div>
+</div>
+<div class="datecheck"><b>DATE CHECK:</b> Every story on this page happened or was first reported on Monday 23 November 2026 (UTC). Left out because they happened on an earlier day: COP31 collapse itself Sun 22 Nov · 'El Chapo Isidro' captured Sun 22 Nov · KC Current's NWSL title win Sat 21 Nov · Skubal's Mets deal Sun 22 Nov · GTA VI $3.79bn reported Sat 21 Nov · Brentford 4-0 Everton Sat 21 Nov · Denmark plot foiled Sat 21 Nov · Manila $2.4bn deal unveiled Wed 18 Nov · Aus-Korea deal signed at COP31</div>
+<div class="howsure">HOW SURE: REPORTED = carried by the day's wires or officials · CLAIM = one side's account, labelled as such · ONGOING = still unfolding · Scenes are drawn illustrations, not photographs.</div>
+</div></div>
