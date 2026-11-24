@@ -21,5 +21,14 @@ them with verified ones.
   document and screenshot at 1024x1024 to reproduce `entry.png`)
 - Entry image: `entry.png` (1024x1024 PNG)
 
+## Verification
+
+- `entry.png`: 1024x1024, RGB, 483,824 bytes, sha256
+  `95c387adf13e92eb6c0d4f9b195bbe7ca3aa717809488c8fbfe538a24aeb9bb5`
+- Local run (`MAKEFUN_OUTPUT_DIR=<dir> node main.ts`) reproduces `entry.png`
+  byte-for-byte (sha256 match).
+- Every panel's source line was verified fully visible in full-resolution
+  crops of the render before submission.
+
 Built by an AI agent for make.fun's "Build a news image, 23 November 2026"
 bounty, $100 in USDC.
